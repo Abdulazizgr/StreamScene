@@ -10,10 +10,16 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="lib/fontawesome.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/spinner.css" />
-    <script src="js/script.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="../lib/fontawesome.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/spinner.css" />
+
+    <script src="../js/script.js" defer></script>
     <title>StreamScene</title>
   </head>
   <body>
@@ -22,31 +28,40 @@
         <div class="logo"><a href="/">StreamScene</a></div>
         <nav>
           <ul>
-            <li>
-              <a class="nav-link" href="./home.html">Movies</a>
+            <li class="dropdown">
+              <a class="nav-link" href="#">Movies</a>
+              <div class="dropdown-content">
+                <a href="../home.html">Popular</a>
+                <a href="./upcoming-movies.html">Upcoming</a>
+                <a href="./top-rated-movies.html">Top Rated</a>
+                <a href="./now-playing-movies.html">Now Playing</a>
+              </div>
             </li>
-            <li>
-              <a class="nav-link" href="/shows.html">TV Shows</a>
+            <li class="dropdown">
+              <a class="nav-link" href="#">TV Shows</a>
+              <div class="dropdown-content">
+                <a href="../shows.html">Popular</a>
+                <a href="../tv/top-rated-shows.html">Top Rated</a>
+                <a href="../tv/airing-today.html">Airing Today</a>
+                <a href="../tv/on-the-air.html">On The Air</a>
+              </div>
             </li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <!-- Movie Details -->
+    <!-- top Rated -->
     <section class="container">
-      <div class="back">
-        <a class="btn" href="./index.html">Back To Movies</a>
-      </div>
-
-      <!-- Movie Details Output -->
-      <div id="movie-details"></div>
+      <h2>Top Rated</h2>
+      <div id="top-rated-movies" class="grid"></div>
     </section>
 
-    <!-- Footer -->
     <footer class="main-footer">
       <div class="container">
-        <div class="logo"><span> <a href="/">StreamScene</a> </span></div>
+        <div class="logo">
+          <span> <a href="/">StreamScene</a> </span>
+        </div>
         <div class="social-links">
           <a href="https://www.linkedin.com" target="_blank"
             ><i class="fab fa-linkedin-in"></i
@@ -60,7 +75,6 @@
         </div>
       </div>
     </footer>
-    
 
     <div class="spinner"></div>
   </body>

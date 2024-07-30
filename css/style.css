@@ -1,3 +1,5 @@
+/* General Styles */
+/* Apply box-sizing, remove padding and margin */
 *,
 *::before,
 *::after {
@@ -6,11 +8,14 @@
   margin: 0;
 }
 
+/* Define root variables for colors */
 :root {
   --color-primary: #020d18;
   --color-secondary: #f1c40f;
 }
 
+/* Body Styles */
+/* Set font, background color, and text color for the body */
 body {
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
@@ -19,15 +24,20 @@ body {
   overflow-x: hidden;
 }
 
+/* Link Styles */
+/* Set default link color and remove underline */
 a {
   color: #fff;
   text-decoration: none;
 }
 
+/* List Styles */
+/* Remove default list styling */
 ul {
   list-style: none;
 }
 
+/* Text Color Utility Classes */
 .text-primary {
   color: var(--color-secondary);
 }
@@ -36,15 +46,20 @@ ul {
   color: var(--color-secondary);
 }
 
+/* Active Link Styles */
+/* Highlight active link */
 .active {
   color: var(--color-secondary);
   font-weight: 700;
 }
 
+/* Margin Utility Class */
 .back {
   margin-top: 30px;
 }
 
+/* Button Styles */
+/* Basic button styling */
 .btn {
   display: inline-block;
   padding: 0.5rem 1rem;
@@ -56,21 +71,26 @@ ul {
   transition: all 0.3s ease-in-out;
 }
 
+/* Hover effect for buttons */
 .btn:hover {
   background: var(--color-secondary);
   color: #000;
 }
 
+/* Disabled button styles */
 .btn:disabled {
   border-color: #ccc;
   cursor: not-allowed;
 }
 
+/* Disabled button hover effect */
 .btn:disabled:hover {
   background: transparent;
   color: #fff;
 }
 
+/* Container Styles */
+/* Center the container and apply padding */
 .container {
   max-width: 1200px;
   width: 100%;
@@ -78,6 +98,14 @@ ul {
   padding: 0 20px;
 }
 
+/* Header Styles */
+/* Main header styling */
+.main-header {
+  padding: 20px 0;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Header container styling */
 .main-header .container {
   display: flex;
   justify-content: space-between;
@@ -85,11 +113,7 @@ ul {
   padding: 0 20px;
 }
 
-.main-header {
-  padding: 20px 0;
-  background: rgba(0, 0, 0, 0.8);
-}
-
+/* Logo styling */
 .main-header .logo {
   color: #fff;
   font-size: 25px;
@@ -97,63 +121,75 @@ ul {
   text-transform: uppercase;
 }
 
+/* Navigation list styling */
 .main-header ul {
   display: flex;
 }
 
+/* Navigation list items */
 .main-header ul li {
   margin-left: 20px;
 }
 
+/* Navigation links styling */
 .main-header ul li a {
   font-size: 16px;
 }
 
+/* Hover effect for navigation links */
 .main-header ul li a:hover {
   color: var(--color-secondary);
 }
 
-/* Grid */
+/* Grid Layout */
+/* Grid container styling */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 20px;
 }
 
-/* Card */
+/* Card Styles */
+/* Card container styling */
 .card {
   background: #04376b;
   padding: 5px;
 }
 
+/* Card image styling */
 .card img {
   width: 100%;
 }
 
+/* Card body styling */
 .card-body {
   padding: 10px;
   font-size: 20px;
 }
 
+/* Card hover effect */
 .card:hover {
   transform: scale(1.05);
   transition: all 0.5s ease-in-out;
   background: #0a4b8f;
 }
 
-/* Footer */
+/* Footer Styles */
+/* Footer container styling */
 .main-footer {
   background: #020d18;
   padding: 20px 0;
   margin-top: 20px;
 }
 
+/* Footer content styling */
 .main-footer .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+/* Footer logo styling */
 .main-footer .container .logo {
   color: #fff;
   font-size: 25px;
@@ -161,61 +197,54 @@ ul {
   text-transform: uppercase;
 }
 
+/* Footer social links styling */
 .main-footer .container .social-links {
   display: flex;
   font-size: 20px;
 }
 
+/* Footer social link items */
 .main-footer .container .social-links a {
   margin-left: 10px;
   color: #fff;
 }
 
+/* Footer social link hover effect */
 .main-footer .container .social-links a:hover {
   color: var(--color-secondary);
 }
 
 /* Section: Now Playing */
-
+/* Now playing section styling */
 section.now-playing {
   padding: 60px;
   background: url(../images/showcase-bg.jpg) no-repeat center center/cover;
 }
 
+/* Section header styling */
 section h2 {
   margin: 20px 0;
   text-align: center;
   text-transform: uppercase;
 }
 
-/* Slider */
-.swiper {
-  width: 100%;
-  height: 50%;
-}
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: var(--color-primary);
+/* "See More" Card Styles */
+/* Flexbox alignment for card body */
+.see-more-card .card-body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
+  justify-content: center;
   height: 100%;
-  object-fit: cover;
 }
 
-.swiper-rating {
-  padding: 10px;
+/* Margin for "See More" button */
+.see-more-card .btn {
+  margin-top: 20px;
 }
 
 /* Movie & Show Details */
+/* Details top section styling */
 .details-top {
   display: flex;
   justify-content: space-between;
@@ -223,6 +252,7 @@ section h2 {
   margin: 50px 0 30px;
 }
 
+/* Responsive details top section */
 @media (max-width: 700px) {
   .details-top {
     display: block;
@@ -232,6 +262,7 @@ section h2 {
   }
 }
 
+/* Image styling for details section */
 .details-top img {
   width: 400px;
   height: 100%;
@@ -239,17 +270,21 @@ section h2 {
   object-fit: cover;
 }
 
+/* Paragraph styling for details section */
 .details-top p {
   margin: 20px 0;
 }
 
+/* Button styling for details section */
 .details-top .btn {
   margin-top: 20px;
 }
 
+/* Details bottom section styling */
 .details-bottom {
 }
 
+/* List items for details bottom section */
 .details-bottom li {
   margin: 15px 0;
   padding-bottom: 8px;
@@ -257,12 +292,14 @@ section h2 {
   border-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Search */
+/* Search Section */
+/* Search section styling */
 .search {
   padding: 60px;
   margin-bottom: 40px;
 }
 
+/* Search container styling */
 .search .container {
   display: flex;
   justify-content: center;
@@ -270,19 +307,23 @@ section h2 {
   flex-direction: column;
 }
 
+/* Search header styling */
 .search .container h2 {
   margin-bottom: 20px;
 }
 
+/* Search form styling */
 .search .container form {
   width: 100%;
   max-width: 600px;
 }
 
+/* Search radio labels styling */
 .search-radio label {
   margin-right: 15px;
 }
 
+/* Flexbox for search inputs and button */
 .search-flex {
   display: flex;
   justify-content: space-between;
@@ -290,6 +331,7 @@ section h2 {
   margin-top: 10px;
 }
 
+/* Search input styling */
 .search .container form input[type='text'] {
   flex: 6;
   width: 100%;
@@ -302,14 +344,17 @@ section h2 {
   color: #fff;
 }
 
+/* Placeholder color for search input */
 .search .container form input[type='text']::placeholder {
   color: #fff;
 }
 
+/* Focus state for search input */
 .search .container form input[type='text']:focus {
   outline: none;
 }
 
+/* Search button styling */
 .search .container form button {
   flex: 1;
   display: block;
@@ -322,30 +367,67 @@ section h2 {
   color: #000;
 }
 
+/* Search button hover effect */
 .search .container form button:hover {
   background: transparent;
   color: #fff;
 }
 
+/* Pagination Styles */
+/* Pagination container styling */
 .pagination {
   margin-top: 20px;
 }
 
+/* Page counter styling */
 .page-counter {
   margin-top: 10px;
 }
 
-/* Alert */
+/* Alert Styles */
+/* Alert container styling */
 .alert {
   padding: 10px 20px;
   margin-bottom: 20px;
   border-radius: 5px;
 }
 
+/* Success alert styling */
 .success {
   background: green;
 }
 
+/* Error alert styling */
 .error {
   background: red;
+}
+
+/* Dropdown Menu Styles */
+/* Dropdown content styling */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  margin-left: -18px;
+  background-color: #020d18;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Dropdown links styling */
+.dropdown-content a {
+  color: rgb(236, 225, 225);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Hover effect for dropdown links */
+.dropdown-content a:hover {
+  background-color: #020d18;
+}
+
+/* Display dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
 }
