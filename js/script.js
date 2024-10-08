@@ -16,7 +16,7 @@ const global = {
   api: {
     // Register your key at https://www.themoviedb.org/settings/api and enter it here
     // Only use this for development or very small projects. You should store your key and make requests from a server
-    apiKey: 'ff3851e7e34c857de0cb2c66e5b7b523',
+    apiKey: '306d6531062636a9516e93b215c7aa33',
     // Base URL for the TMDB API
     apiUrl: 'https://api.themoviedb.org/3/',
   },
